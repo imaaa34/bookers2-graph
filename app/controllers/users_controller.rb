@@ -11,6 +11,11 @@ class UsersController < ApplicationController
     @last_week_book = @books.where(created_at: 1.week.ago.all_week).count
       # 以下解答例
       # @today_book =  @books.created_today
+    @two_days_ago_book = @books.where(created_at: 2.days.ago.all_day).count
+    @three_days_ago_book = @books.where(created_at: 3.days.ago.all_day).count
+    @four_days_ago_book = @books.where(created_at: 4.days.ago.all_day).count
+    @five_days_ago_book = @books.where(created_at: 5.days.ago.all_day).count
+    @six_days_ago_book = @books.where(created_at: 6.days.ago.all_day).count
   end
 
   def index
